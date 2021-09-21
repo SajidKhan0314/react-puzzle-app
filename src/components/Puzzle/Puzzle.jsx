@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import classes from "./Puzzle.module.scss";
 import PuzzlePiece from "./PuzzlePiece/PuzzlePiece";
 
@@ -76,6 +76,10 @@ const Puzzle = (props) => {
     return false;
   };
 
+  const resetPuzzle = useCallback(() => {
+    alert("Not working right now!");
+  }, []);
+
   useEffect(() => {
     setBoxes((oldState) => shuffle([...oldState]));
     setArrayIsShuffled(true);
@@ -95,6 +99,10 @@ const Puzzle = (props) => {
   return (
     <div className={classes.Puzzle}>
       <h2>Place the pieces in order</h2>
+      <div className={classes.ResetForm}>
+        <p>Reset Puzzle</p>
+        <button onClick={() => resetPuzzle()}>Reset</button>
+      </div>
       <div className={classes.PuzzleBox}>
         {Array.from(Array(parseInt(props.grids)).keys()).map((i) => (
           <div key={boxes[i].id} className={classes.Row}>
