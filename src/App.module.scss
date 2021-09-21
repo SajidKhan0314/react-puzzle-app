@@ -1,0 +1,58 @@
+.Main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.Header {
+  width: 70%;
+  // border: 1px solid black;
+  background-color: #006400;
+  background-clip: text;
+  color: transparent;
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+  .HeaderTextPrimary {
+    font-size: 3rem;
+  }
+}
+
+.GridInputForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 4rem;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  width: 43%;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+  .InputLabel {
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+  }
+
+  input {
+    border: 1px solid gray;
+    border-radius: 1rem;
+    height: 3.5rem;
+    width: 30rem;
+    padding: 1rem;
+
+    &:focus {
+      padding: 0.9rem;
+      border-width: 2px;
+      outline: none;
+    }
+  }
+}

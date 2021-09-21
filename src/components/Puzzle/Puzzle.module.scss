@@ -1,0 +1,26 @@
+.Puzzle {
+  width: 60%;
+  font: {
+    size: 1.6rem;
+  }
+  text-align: center;
+
+  h2 {
+    margin: 1rem 0 2rem 0;
+  }
+
+  .PuzzleBox {
+    border-radius: 1rem;
+    // border: 1px solid green;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+}
+
+.Row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
