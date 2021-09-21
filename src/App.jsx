@@ -9,6 +9,9 @@ function App() {
 
   const submitForm = (event) => {
     event.preventDefault();
+    if (grids < 0 || grids > 9) {
+      return alert("Enter a number from 0-9");
+    }
     setShowPuzzle(true);
   };
 
@@ -29,7 +32,7 @@ function App() {
         }}
         id="gridInput"
         type="number"
-        placeholder="Enter a grid number"
+        placeholder="Enter a grid number (0-9)"
       />
     </form>
   );

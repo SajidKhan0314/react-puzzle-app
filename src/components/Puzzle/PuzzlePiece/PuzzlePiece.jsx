@@ -8,15 +8,8 @@ const PuzzlePiece = (props) => {
       onDragStart={(event) => props.onDragStart(event, props.id)}
       onDragOver={props.onDragOver}
       onDrop={(event) => props.onDrop(event, props.id)}
-
-      // onDragOver={(event) => {
-      //   console.log(event);
-      // }}
-      // onDrop={(event) => {
-      //   console.log(event);
-      // }}
     >
-      {props.value}
+      {props.value < 10 ? `0${props.value}` : props.value}
     </div>
   );
 };
